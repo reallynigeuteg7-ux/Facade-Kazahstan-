@@ -1,0 +1,354 @@
+.drawing-panel {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f6f9fb;
+  border: 1px solid #cbd7df;
+  border-radius: 12px;
+  color: #173247;
+  min-width: 0;
+}
+.drawing-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.drawing-heading h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.drawing-heading span {
+  font-size: 0.875rem;
+  color: #915020;
+  background: #fff0df;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.drawing-panel p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0.7rem 0;
+}
+.drawing-panel label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  margin: 0.65rem 0;
+  min-width: 0;
+}
+.drawing-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 0.7rem;
+}
+.drawing-panel input,
+.drawing-panel textarea {
+  background: white;
+  color: #173247;
+  border: 1px solid #b7c8d4;
+  font-size: 1rem;
+  min-width: 0;
+  width: 100%;
+  padding: 0.55rem;
+  height: auto;
+}
+.drawing-select {
+  width: 100%;
+  height: auto;
+  min-height: 42px;
+  white-space: normal;
+  background: white;
+  border: 1px solid #b7c8d4;
+  color: #173247;
+  padding: 0.5rem;
+  text-align: left;
+}
+.drawing-options {
+  z-index: 200;
+  background: white;
+  color: #173247;
+  max-height: 310px;
+}
+.drawing-options [role='option'] {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+}
+.drawing-preview {
+  display: block;
+  background: white;
+  border: 1px solid #d9e2e8;
+  margin: 1rem 0;
+}
+.drawing-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+.drawing-download {
+  background: #173247;
+  color: white;
+  padding: 0.65rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.drawing-warning {
+  color: #994b20;
+}
+.drawing-ai-visual {
+  margin: 1.2rem 0;
+  padding: clamp(0.8rem, 2vw, 1.3rem);
+  border: 1px solid #ccd8df;
+  border-radius: 12px;
+  background: #fff;
+}
+.drawing-ai-visual-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.drawing-ai-visual-head strong {
+  font-size: 1.1rem;
+}
+.drawing-ai-visual-head p {
+  color: #5c6e77;
+  max-width: 700px;
+}
+.drawing-ai-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.8rem;
+  border: 1px solid #d5dfe4;
+  background: white;
+}
+.drawing-ai-visual-empty {
+  padding: 1rem;
+  border: 1px dashed #b8c8d1;
+  border-radius: 8px;
+  background: #f8fafb;
+}
+.drawing-ai-visual .drawing-download {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border: 0;
+}
+.drawing-ai-visual .drawing-download:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+.drawing-ai-reference {
+  margin: 1rem 0 0;
+}
+.drawing-ai-reference img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  background: #f3f5f6;
+}
+.drawing-ai-reference figcaption {
+  margin-top: .45rem;
+  color: #647680;
+  font-size: .8rem;
+}
+.drawing-technical {
+  margin: 1rem 0;
+}
+.drawing-technical > summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: .6rem 0;
+}
+.drawing-footnote {
+  color: #4f6676;
+}
+.crm-panel .drawing-panel {
+  margin: 1.2rem 0;
+}
+.crm-panel .drawing-panel h3 {
+  margin: 0;
+}
+.drawing-missing {
+  background: #fff3e4;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+@media (max-width: 360px) {
+  .drawing-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.drawing-construction {
+  border: 1px solid #cbd7df;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 15px 0;
+}
+.drawing-construction summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+.drawing-pages {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.drawing-pages button {
+  padding: 7px 9px;
+  border: 1px solid #b7c8d4;
+  border-radius: 5px;
+  font-size: 11px;
+  background: white;
+  cursor: pointer;
+}
+.drawing-pages button[aria-pressed='true'] {
+  background: #173247;
+  color: white;
+  border-color: #173247;
+}
+.drawing-export {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.drawing-export button {
+  font-size: 12px;
+}
+.drawing-preview {
+  overflow: auto;
+}
+.drawing-preview img {
+  min-width: 650px;
+}
+.drawing-construction [aria-invalid='true'] {
+  border-color: #a74221;
+}
+.drawing-viewer {
+  background: #f3f4f1;
+  border: 1px solid #cbd1ca;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.drawing-camera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  background: #eff1ed;
+}
+.drawing-camera button {
+  border: 1px solid #c0c8c1;
+  background: white;
+  color: #23362c;
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.drawing-camera button:hover,
+.drawing-camera button[aria-pressed='true'] {
+  background: #233d32;
+  color: white;
+}
+.drawing-camera label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  font-size: 12px;
+  margin: 4px 0;
+}
+.drawing-camera input[type='range'] {
+  padding: 0;
+  min-width: 80px;
+  max-width: 220px;
+  height: 24px;
+  accent-color: #294737;
+}
+.drawing-viewer .drawing-preview {
+  border: 0;
+  overflow: hidden;
+  background: #d1d3cf;
+}
+.drawing-viewer .drawing-preview img {
+  min-width: 0;
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+.drawing-orbit {
+  cursor: grab;
+  touch-action: none;
+}
+.drawing-orbit:active {
+  cursor: grabbing;
+}
+.drawing-orbit:focus-visible {
+  outline: 3px solid #477c5b;
+  outline-offset: -3px;
+}
+.drawing-viewer > .chat-mode {
+  padding: 0 12px 10px;
+}
+.drawing-viewer:fullscreen {
+  background: #f3f4f1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drawing-viewer:fullscreen .drawing-camera {
+  width: 100%;
+  justify-content: center;
+}
+.drawing-viewer:fullscreen .drawing-camera label {
+  width: auto;
+}
+.drawing-viewer:fullscreen .drawing-preview {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.drawing-viewer:fullscreen .drawing-preview img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.drawing-viewer:fullscreen .drawing-solid-viewer { height: 100% !important; min-height: 0 !important; }
+.drawing-solid-viewer canvas { display: block; width: 100%; height: 100%; }
+.drawing-edit {
+  margin-top: 18px;
+  border-top: 1px solid #ccd5cf;
+  padding-top: 14px;
+}
+.drawing-edit > summary {
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.drawing-catalog-reference{margin:18px 0;padding:16px;border:1px solid #d5e0e6;border-radius:12px;background:#f7fafb}
+.drawing-catalog-reference>label{display:grid;gap:8px;font-size:14px;font-weight:600}
+.drawing-catalog-reference figure{display:flex;align-items:center;gap:18px;margin:12px 0 0}
+.drawing-catalog-reference img{width:95px;height:125px;object-fit:contain;border-radius:6px;background:white}
+.drawing-catalog-reference figcaption{max-width:560px;font-size:13px;line-height:1.5;color:#617b8a}
+.chat-photo-picker{margin:14px 0;padding:12px;border:1px solid #cbdadf;border-radius:12px;background:#f4f8fa}
+.chat-photo-picker summary{cursor:pointer;font-size:14px;font-weight:600;color:#243f4c}
+.chat-photo-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-height:360px;overflow:auto;margin-top:12px}
+.chat-photo-options button{background:white;border:1px solid #d2dfe4;border-radius:9px;padding:8px;text-align:left;color:#243f4c;font-size:12px;cursor:pointer}
+.chat-photo-options img{width:100%;height:140px;object-fit:contain;background:#edf1f3;margin-bottom:6px}
+.chat-photo-options button:hover{border-color:#248d96}
+.drawing-blueprint-source{font-size:13px;line-height:1.65;color:#597481;margin-top:16px}.drawing-blueprint-source summary{font-weight:600;cursor:pointer;color:#284c5b}.drawing-blueprint-source details img{width:100%;height:auto;max-height:none;margin:14px 0;display:block;border:1px solid #d5e0e6}.drawing-blueprint-source a{color:#278591}

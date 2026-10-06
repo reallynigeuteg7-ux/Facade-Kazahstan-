@@ -1,0 +1,12 @@
+{
+  "framework": "nextjs",
+  "crons": [{"path":"/api/cron/mail","schedule":"0 1 * * *"},{"path":"/api/cron/backup","schedule":"0 2 * * *"}],
+  "functions": {
+    "app/api/enquiries/route.ts": {
+      "maxDuration": 60
+    },
+    "app/api/chat/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}

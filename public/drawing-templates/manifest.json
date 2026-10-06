@@ -1,0 +1,247 @@
+{
+  "received": "2026-09-29",
+  "files": 24,
+  "matchedCatalogPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "missingCatalogPages": [],
+  "kitSelection": {
+    "attachment": 9,
+    "bench": [
+      1800,
+      850,
+      620
+    ],
+    "bin": [
+      500,
+      700,
+      500
+    ],
+    "column": [
+      120,
+      1000,
+      120
+    ],
+    "base": 200
+  },
+  "items": [
+    {
+      "attachment": 1,
+      "page": 10,
+      "file": "reference-01.png",
+      "image": "/drawing-templates/reference-01.png",
+      "sha256": "ac02970262e0b3978496727364b91a36ecb63192fddadff993350852efb126be",
+      "bytes": 1938223
+    },
+    {
+      "attachment": 2,
+      "page": 1,
+      "file": "reference-02.png",
+      "image": "/drawing-templates/reference-02.png",
+      "sha256": "716264862cbff0024ce3830936fc43101f2669dd6806c720b4cb61a1c055d860",
+      "bytes": 2381310
+    },
+    {
+      "attachment": 3,
+      "page": 2,
+      "file": "reference-03.png",
+      "image": "/drawing-templates/reference-03.png",
+      "sha256": "e1ac18b9ba0fd7e7cf6bf9b28de7079229b4577744eced341bb32e7efccf09d3",
+      "bytes": 2490732
+    },
+    {
+      "attachment": 4,
+      "page": 3,
+      "file": "reference-04.png",
+      "image": "/drawing-templates/reference-04.png",
+      "sha256": "de368ed17d5fbe91b7fcaccb508079607052d4717b0d05b0d7d3a45a7162c898",
+      "bytes": 2408158
+    },
+    {
+      "attachment": 5,
+      "page": 4,
+      "file": "reference-05.png",
+      "image": "/drawing-templates/reference-05.png",
+      "sha256": "bfc0d9cffb52c6a0c74e116a752ed83abaf96f0ceefa9b4027fe28a587e4191c",
+      "bytes": 2063091
+    },
+    {
+      "attachment": 6,
+      "page": 5,
+      "file": "reference-06.png",
+      "image": "/drawing-templates/reference-06.png",
+      "sha256": "5b4287a3257e0750cc8dc8f90fd88e1b37dc9f16144e7a729decf58b17c4fd77",
+      "bytes": 2037069
+    },
+    {
+      "attachment": 7,
+      "page": 6,
+      "file": "reference-07.png",
+      "image": "/drawing-templates/reference-07.png",
+      "sha256": "79049b50ba5f1aebf9aacf5b0da751acd6e85c7c495edb72a8c530441c63b0a6",
+      "bytes": 2122357
+    },
+    {
+      "attachment": 8,
+      "page": 7,
+      "file": "reference-08.png",
+      "image": "/drawing-templates/reference-08.png",
+      "sha256": "14eeef13c22554e28bd068a02cd1cceed62a88f472c2c2aa48f1f1f22e5789e6",
+      "bytes": 2128074
+    },
+    {
+      "attachment": 9,
+      "page": 7,
+      "file": "reference-09.png",
+      "image": "/drawing-templates/reference-09.png",
+      "sha256": "87e86577e248f2998970819dfcee0f6f9f58f8b2f3e3f053e8d97eab785c59d9",
+      "bytes": 2064230
+    },
+    {
+      "attachment": 10,
+      "page": 7,
+      "file": "reference-10.png",
+      "image": "/drawing-templates/reference-10.png",
+      "sha256": "ad39fa4e8a84f168ef6cd4419ef75f06638cb8b036bd66d6d91d146efe2a92bf",
+      "bytes": 2191981
+    },
+    {
+      "attachment": 11,
+      "page": 8,
+      "file": "reference-11.png",
+      "image": "/drawing-templates/reference-11.png",
+      "sha256": "f60a53dd4000933896b54ef2a7875fbc128fea33ebbc77fea40ca4086a731949",
+      "bytes": 2279230
+    },
+    {
+      "attachment": 12,
+      "page": 9,
+      "file": "reference-12.png",
+      "image": "/drawing-templates/reference-12.png",
+      "sha256": "724dc8aa3f0066533a59f5c68f2a136d156429c48a5d1558c0a311018aacb5af",
+      "bytes": 2265017
+    },
+    {
+      "attachment": 13,
+      "page": 11,
+      "file": "reference-13.png",
+      "image": "/drawing-templates/reference-13.png",
+      "sha256": "65eecef057cf75c0a42deffbab3668d85083173a449062af16f8cf20380bfe5e",
+      "bytes": 2145922
+    },
+    {
+      "attachment": 14,
+      "page": 13,
+      "file": "reference-14.png",
+      "image": "/drawing-templates/reference-14.png",
+      "sha256": "12331296159a5588b871e46241ccf8932652f19647df7a6df8a278bd768b0548",
+      "bytes": 2085045
+    },
+    {
+      "attachment": 15,
+      "page": 14,
+      "file": "reference-15.png",
+      "image": "/drawing-templates/reference-15.png",
+      "sha256": "8cab609dfb821ebc09e0fb64307f5400793f3e15f1afb59d461739a4fa826cdc",
+      "bytes": 1869994
+    },
+    {
+      "attachment": 16,
+      "page": 15,
+      "file": "reference-16.png",
+      "image": "/drawing-templates/reference-16.png",
+      "sha256": "28d55cf5ab2fc3986d5816ff072bacd63167bae9fcba55fb0deea3dfa5fd32b5",
+      "bytes": 2239756
+    },
+    {
+      "attachment": 17,
+      "page": 17,
+      "file": "reference-17.png",
+      "image": "/drawing-templates/reference-17.png",
+      "sha256": "6d071f2f80a93b4e2adc13161e0cd2a5609c20c77a3a3345d937f8eb1b17950b",
+      "bytes": 2018763
+    },
+    {
+      "attachment": 18,
+      "page": 18,
+      "file": "reference-18.png",
+      "image": "/drawing-templates/reference-18.png",
+      "sha256": "e67f62a59ab8cbb00a62f01ce5ee3ba2bd848f98a28c951dadbc9543c9dfac5a",
+      "bytes": 1858122
+    },
+    {
+      "attachment": 19,
+      "page": 19,
+      "file": "reference-19.png",
+      "image": "/drawing-templates/reference-19.png",
+      "sha256": "be5f43c66d8c307655362a24b4ebc8a9fc28abef7952ddb243cd13ad792a3514",
+      "bytes": 1719573
+    },
+    {
+      "attachment": 20,
+      "page": 21,
+      "file": "reference-20.png",
+      "image": "/drawing-templates/reference-20.png",
+      "sha256": "ac0011a355cf3045bbf826459944a8af7441b075c725735350ad4b44c38877dd",
+      "bytes": 2000275
+    },
+    {
+      "attachment": 21,
+      "page": 22,
+      "file": "reference-21.png",
+      "image": "/drawing-templates/reference-21.png",
+      "sha256": "92b3be8550a27ce7654e6755d9c397a9547c8ec2af0a1b5d9725eb10387bb7ee",
+      "bytes": 1882644
+    },
+    {
+      "attachment": 22,
+      "page": 12,
+      "file": "reference-22.png",
+      "image": "/drawing-templates/reference-22.png",
+      "sha256": "e3e086a833594e7547219e410e32fc27ccf1a62f805f1879d8fa17baf5afbf84",
+      "bytes": 2149157,
+      "received": "2026-10-01"
+    },
+    {
+      "attachment": 23,
+      "page": 16,
+      "file": "reference-23.png",
+      "image": "/drawing-templates/reference-23.png",
+      "sha256": "a020c81e01e9913b3bc97a5f6c067bc5ad06df072df0db4076223e2c7f8f9bc7",
+      "bytes": 1828751,
+      "received": "2026-10-01"
+    },
+    {
+      "attachment": 24,
+      "page": 20,
+      "file": "reference-24.png",
+      "image": "/drawing-templates/reference-24.png",
+      "sha256": "905efab571f62a472a230644892283ea5afc1d5d1d328bb23ceff0edd1b4fcce",
+      "bytes": 2476188,
+      "received": "2026-10-01"
+    }
+  ],
+  "missingSourceDecision": "replaced-by-references-22-23-24",
+  "updated": "2026-10-01"
+}

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {writeFileSync,mkdirSync} from 'node:fs';
+import {initialDrawing,cleanDrawing} from './lib/drawings/model.mjs';
+import {assemblyGeometry,renderDrawingPages} from './lib/drawings/render.mjs';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);const sharp=createRequire(require.resolve('next/package.json'))('sharp');
+const notes='Овальный каркас; ширина пояса 1000 мм; высота пояса 100 мм; пролёты 1800+2400+1800 мм; делений полуокружности 6';
+const spec=initialDrawing('Овальный каркас','16000 × 4000 × 10000 мм','',notes);
+assert.equal(spec.construction.form,'oval-frame');
+assert.deepEqual(spec.construction.straightSpans,[1800,2400,1800]);
+assert.equal(spec.construction.bandWidth,1000);assert.equal(spec.construction.bandHeight,100);
+const g=assemblyGeometry(spec);assert.equal(g.innerRadius,4000);assert.equal(g.straight,6000);assert(g.stations.some(p=>Math.abs(p[1]-3464.101615)<.001));
+const out='D:/Codex/2026-09-05/new-chat/work/drawing-reference';
+mkdirSync(out,{recursive:true});
+const pages=renderDrawingPages({...spec,notes:'Проверочный пример по геометрии PDF. Общая высота 4000 = 3900 в свету + 100 пояс. Сечение стоек не задано; показаны оси.'},'Овальный каркас · проверочный пример','EXAMPLE');
+for(let i=0;i<pages.length;i++){writeFileSync(out+'/new-'+(i+1)+'.svg',pages[i].svg);await sharp(Buffer.from(pages[i].svg)).png().toFile(out+'/new-'+(i+1)+'.png');}
+assert.throws(()=>cleanDrawing({...spec,construction:{...spec.construction,straightSpans:[1800,2400]}}));
+assert.throws(()=>cleanDrawing({...spec,construction:{...spec.construction,arcSegments:100000}}));
+const empty=initialDrawing('Скамейка','','');assert.equal(assemblyGeometry(empty).stations.length,0);
+assert(!renderDrawingPages({...empty,notes:'<script>alert(1)</script>'})[2].svg.includes('<script>'));
+console.log('Passed: reference radius, 1800/2400/1800 span chain, arc coordinates 3464.10, unknown values, validation and safe SVG. Pages: '+pages.length);

@@ -1,0 +1,13 @@
+{
+  "name": "Facade Kazakhstan - Catalog 29.08.2026.pdf",
+  "date": "29.08.2026",
+  "pages": 22,
+  "bytes": 31391252,
+  "sha256": "a0c338c7b8c3519d4d65f8f7260407a7d6bb068c4d105455cb8387277f4b2c53",
+  "parts": [
+    "/catalog-document/part-1.bin",
+    "/catalog-document/part-2.bin",
+    "/catalog-document/part-3.bin",
+    "/catalog-document/part-4.bin"
+  ]
+}

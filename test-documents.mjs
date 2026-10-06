@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {unzipSync,strFromU8} from 'fflate';
+import {cleanDocument,documentDefaults,documentHtml,totals,lineAmount,sidingRows} from './lib/crm/documents.mjs';
+import {documentXlsx} from './lib/crm/document-xlsx.mjs';
+const base=documentDefaults({id:'c9f25666-0000-4000-8000-000000000000',name:'Образец',product:'Скамейка и урна',phone:'',quantity:'15 шт',amount:0});
+const bench=cleanDocument({...base,items:[{name:'Скамейка',description:'Порошковая полимерная покраска, RAL 9005',unit:'шт',quantity:'15',price:'65000'},{name:'Урна',description:'Порошковая полимерная покраска, RAL 9005',unit:'шт',quantity:'15',price:'40000'}]},true);
+assert.deepEqual(totals(bench),{amounts:[975000,600000],total:1575000});
+assert.equal(lineAmount({quantity:'0,1',price:'0,15'}),0.02);
+assert.equal(lineAmount({quantity:'1.2345',price:'10'}),12.35);
+assert.equal(lineAmount({quantity:'1',price:'0'}),0);
+assert.equal(totals({...bench,items:[{...bench.items[0],price:''}]}).total,null);
+assert.throws(()=>cleanDocument({...bench,items:[{...bench.items[0],price:''}]},true));
+assert.throws(()=>cleanDocument({...bench,date:'2026-02-30'}));
+assert.throws(()=>cleanDocument({...bench,items:[{...bench.items[0],quantity:'-1'}]}));
+assert.equal(documentDefaults({...base,id:'id',product:'Изделие',quantity:'2 скамейки и 3 урны'}).items[0].quantity,'');
+const quantities=[5200,8100,7000,93.75,1,8100,21400,87,10000,2600,5200,5200];
+const siding=cleanDocument({...base,title:'Сайдинг',pricing:'package',packagePrice:'50440000',items:sidingRows.map(([name,description,unit],i)=>({name,description,unit,quantity:String(quantities[i]),price:''}))},true);
+assert.equal(totals(siding).total,50440000);
+assert.equal(totals({...siding,packagePrice:''}).total,null);
+const html=documentHtml({...bench,title:'<script>bad()</script>',vat:'without'},'kp');
+assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));assert.ok(html.includes('без НДС'));assert.ok(!html.includes('Сумма с НДС'));
+const out='D:/Codex/2026-09-05/new-chat/work/quote-documents';
+for(const [name,doc,kind] of [['bench',bench,'kp'],['siding',siding,'pp']]){
+ const bytes=documentXlsx(doc,kind);const zip=unzipSync(bytes);const xml=strFromU8(zip['xl/worksheets/sheet1.xml']);
+ assert.ok(xml.includes(String(totals(doc).total)));assert.ok(xml.includes('<f>SUM('));
+ if(doc.pricing==='package')assert.ok(xml.includes('F8:F19'));
+ else assert.ok(xml.includes('ROUND(D9*E9,2)'));
+ await fs.writeFile(`${out}/${name}.xlsx`,bytes);await fs.writeFile(`${out}/${name}.html`,documentHtml(doc,kind));
+}
+console.log('PASS: source totals, decimal rounding, blank vs zero, invalid dates/quantities, ambiguous order quantity, package pricing, HTML escaping and Excel formulas.');

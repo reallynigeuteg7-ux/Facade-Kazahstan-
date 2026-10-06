@@ -1,0 +1,1 @@
+ALTER TABLE `crm_leads` ADD `drawing_spec` text DEFAULT '' NOT NULL;

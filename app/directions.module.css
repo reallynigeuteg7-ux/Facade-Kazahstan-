@@ -1,0 +1,20 @@
+.container{width:min(1400px,92%);margin:0 auto;padding:35px 0 75px}
+.back{display:inline-flex;font-size:12px;color:#717669;margin-bottom:35px}
+.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:end}
+.intro h1{font-size:clamp(38px,4.9vw,70px);line-height:1.1;letter-spacing:-.05em;margin:20px 0 0;max-width:700px}
+.copy p{font-size:15px;line-height:1.8;color:#626b59;margin:0 0 25px;max-width:510px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:35px 0}
+.links a{display:flex;gap:25px;align-items:center;padding:11px 16px;border:1px solid #d9dcd0;border-radius:7px;font-size:12px;background:#fff8}
+.links a:hover{background:#d7ef63;border-color:#d7ef63}
+.links span{color:#728052}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 22px}
+.gallery figure{margin:0;min-width:0}
+.gallery figure>a{display:block;position:relative;aspect-ratio:1.45;overflow:hidden;background:#e5e9df;border-radius:13px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.gallery a:hover img{transform:scale(1.035)}
+.zoom{position:absolute;right:16px;bottom:16px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;font-size:22px;background:#f5f5efed;color:#22251f}
+.gallery figcaption{display:flex;gap:15px;padding-top:13px;font-size:13px;line-height:1.5}
+.gallery figcaption>span{font-size:10px;color:#888f7c;padding-top:2px}
+@media(max-width:800px){.container{width:90%;padding-top:24px}.intro{grid-template-columns:1fr;gap:22px}.intro h1{font-size:44px}.copy p{font-size:14px;max-width:none;margin-bottom:20px}.back{margin-bottom:25px}.links{margin:27px 0;gap:8px}.links a{padding:10px 12px;gap:15px}.gallery{gap:23px 14px}.gallery figure>a{aspect-ratio:1.1}.gallery figcaption{font-size:12px;gap:10px}.zoom{height:32px;width:32px;right:10px;bottom:10px}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr;gap:26px}.gallery figure>a{aspect-ratio:1.35}.intro h1{font-size:39px}.container{padding-bottom:45px}.links a{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.gallery img{transition:none}}

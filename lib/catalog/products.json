@@ -1,0 +1,332 @@
+[
+  {
+    "id": "PDF-01",
+    "page": 1,
+    "name": "Скамейка со спинкой",
+    "kind": "bench",
+    "price": 80000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 1880.0,
+      "height": 930.0,
+      "depth": 650.0,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-1.jpg"
+  },
+  {
+    "id": "PDF-02",
+    "page": 2,
+    "name": "Скамейка с декоративными опорами",
+    "kind": "bench",
+    "price": 200000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-2.jpg"
+  },
+  {
+    "id": "PDF-03",
+    "page": 3,
+    "name": "Скамейка с боковыми панелями",
+    "kind": "bench",
+    "price": 70000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 1900.0,
+      "height": 820.0,
+      "depth": 550.0,
+      "thickness": 2.0
+    },
+    "image": "/catalog-document/page-3.jpg"
+  },
+  {
+    "id": "PDF-04",
+    "page": 4,
+    "name": "Скамейка с прямыми опорами",
+    "kind": "bench",
+    "price": 70000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 1900.0,
+      "height": 820.0,
+      "depth": 500.0,
+      "thickness": 2.0
+    },
+    "image": "/catalog-document/page-4.jpg"
+  },
+  {
+    "id": "PDF-05",
+    "page": 5,
+    "name": "Скамейка со спинкой",
+    "kind": "bench",
+    "price": 180000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-5.jpg"
+  },
+  {
+    "id": "PDF-06",
+    "page": 6,
+    "name": "Скамейка с декоративными опорами",
+    "kind": "bench",
+    "price": 200000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-6.jpg"
+  },
+  {
+    "id": "PDF-07",
+    "page": 7,
+    "name": "Комплект 3 в 1: скамейка, урна, светильник",
+    "kind": "bench",
+    "price": 190000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-7.jpg"
+  },
+  {
+    "id": "PDF-08",
+    "page": 8,
+    "name": "Скамейка со спинкой",
+    "kind": "bench",
+    "price": 100000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-8.jpg"
+  },
+  {
+    "id": "PDF-09",
+    "page": 9,
+    "name": "Скамейка без спинки",
+    "kind": "bench",
+    "price": 50000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-9.jpg"
+  },
+  {
+    "id": "PDF-10",
+    "page": 10,
+    "name": "Урна с крышкой",
+    "kind": "bin",
+    "price": 40000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 350.0,
+      "height": 750.0,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-10.jpg"
+  },
+  {
+    "id": "PDF-11",
+    "page": 11,
+    "name": "Урна с декоративной панелью",
+    "kind": "bin",
+    "price": 40000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-11.jpg"
+  },
+  {
+    "id": "PDF-12",
+    "page": 12,
+    "name": "Урна на опорах",
+    "kind": "bin",
+    "price": 40000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 350.0,
+      "height": 600.0,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-12.jpg"
+  },
+  {
+    "id": "PDF-13",
+    "page": 13,
+    "name": "Урна с закруглённым верхом",
+    "kind": "bin",
+    "price": 45000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-13.jpg"
+  },
+  {
+    "id": "PDF-14",
+    "page": 14,
+    "name": "Урна с деревянной вставкой",
+    "kind": "bin",
+    "price": 50000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-14.jpg"
+  },
+  {
+    "id": "PDF-15",
+    "page": 15,
+    "name": "Урна с козырьком",
+    "kind": "bin",
+    "price": 25000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 380.0,
+      "height": 640.0,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-15.jpg"
+  },
+  {
+    "id": "PDF-16",
+    "page": 16,
+    "name": "Прямоугольная урна",
+    "kind": "bin",
+    "price": 40000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-16.jpg"
+  },
+  {
+    "id": "PDF-17",
+    "page": 17,
+    "name": "Корзина для кондиционера",
+    "kind": "basket",
+    "price": 30000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 560.0,
+      "height": 560.0,
+      "depth": 350.0,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-17.jpg"
+  },
+  {
+    "id": "PDF-18",
+    "page": 18,
+    "name": "Уличный светильник",
+    "kind": "light",
+    "price": 25000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 560.0,
+      "height": 1100.0,
+      "depth": 100.0,
+      "thickness": 1.5
+    },
+    "image": "/catalog-document/page-18.jpg"
+  },
+  {
+    "id": "PDF-19",
+    "page": 19,
+    "name": "Мангал",
+    "kind": "custom",
+    "price": 50000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": null,
+      "height": null,
+      "depth": null,
+      "thickness": 3.0
+    },
+    "image": "/catalog-document/page-19.jpg"
+  },
+  {
+    "id": "PDF-20",
+    "page": 20,
+    "name": "Костровая чаша",
+    "kind": "custom",
+    "price": 50000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 740.0,
+      "height": 300.0,
+      "depth": null,
+      "thickness": 3.0
+    },
+    "image": "/catalog-document/page-20.jpg"
+  },
+  {
+    "id": "PDF-21",
+    "page": 21,
+    "name": "Садовые качели",
+    "kind": "custom",
+    "price": 200000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 2160.0,
+      "height": 2130.0,
+      "depth": null,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-21.jpg"
+  },
+  {
+    "id": "PDF-22",
+    "page": 22,
+    "name": "Металлическая беседка",
+    "kind": "gazebo",
+    "price": 350000.0,
+    "priceDate": "29.08.2026",
+    "dimensions": {
+      "width": 3500.0,
+      "height": 2500.0,
+      "depth": 2000.0,
+      "thickness": null
+    },
+    "image": "/catalog-document/page-22.jpg"
+  }
+]

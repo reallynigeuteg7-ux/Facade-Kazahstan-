@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { initialDrawing } from './lib/drawings/model.mjs';
+const bench = initialDrawing('Скамейка с боковыми панелями', '1900 × 820 × 550 мм', 'толщина 2 мм', 'Скамейка с деревянными рейками сиденья и спинки; профильная труба 25×50 мм');
+assert.equal(bench.kind, 'bench');
+assert.equal(bench.construction.form, 'slatted-bench');
+assert.equal(initialDrawing('Металлический шкаф с креплениями').kind, 'cabinet');
+assert.equal(initialDrawing('Фасадная кассета с креплениями').kind, 'cassette');
+assert.equal(initialDrawing('Контейнер с боковыми панелями').kind, 'container');
+assert.equal(initialDrawing('Деталь лазерной резки фасадной панели').kind, 'cut');
+assert.equal(initialDrawing('Комплект 3 в 1: скамейка, урна, светильник').kind, 'bench');
+console.log('PASS: primary product determines drawing kind; secondary panels and hardware do not replace it.');

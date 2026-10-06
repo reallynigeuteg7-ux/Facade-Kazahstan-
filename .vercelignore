@@ -1,0 +1,9 @@
+.git
+.dev.vars*
+.env*
+.local
+node_modules
+.next
+*.tsbuildinfo
+test-*.mjs
+work

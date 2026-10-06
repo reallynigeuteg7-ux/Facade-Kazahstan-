@@ -1,0 +1,231 @@
+.stock-page {
+  max-width: 1440px;
+  margin: auto;
+  padding: 36px 28px 70px;
+  color: #19384a;
+  background: #f5f8fa;
+  min-height: 100vh;
+}
+.stock-page header,
+.stock-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.stock-page header span {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.stock-page h1 {
+  font-size: 36px;
+  margin: 8px 0;
+}
+.stock-page h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+.stock-page p {
+  color: #566b78;
+  line-height: 1.6;
+}
+.stock-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+.stock-stats > div,
+.stock-card {
+  background: white;
+  border: 1px solid #dce5ea;
+  border-radius: 16px;
+  padding: 24px;
+}
+.stock-stats span {
+  display: block;
+  font-size: 13px;
+}
+.stock-stats strong {
+  display: block;
+  font-size: 32px;
+  margin-top: 10px;
+}
+.stock-stats .stock-small {
+  font-size: 18px;
+}
+.stock-card {
+  margin-bottom: 24px;
+}
+.stock-forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.stock-page fieldset {
+  border: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.stock-page label {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.stock-page input,
+.stock-page select,
+.stock-page textarea {
+  width: 100%;
+  border: 1px solid #bbcbd5;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: #19384a;
+  background: #fff;
+  min-width: 0;
+}
+.stock-page textarea {
+  min-height: 80px;
+}
+.stock-page button,
+.stock-button {
+  cursor: pointer;
+}
+.stock-button {
+  display: inline-block;
+  background: #163e54;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+.stock-button.secondary {
+  background: white;
+  color: #19384a;
+  border: 1px solid #bbcbd5;
+}
+.stock-page button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.stock-table-wrap {
+  overflow: auto;
+  margin-top: 18px;
+}
+.stock-page table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+.stock-page th {
+  background: #f0f5f8;
+  color: #526c7c;
+  font-weight: 600;
+}
+.stock-page td,
+.stock-page th {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e4ebef;
+  vertical-align: top;
+}
+.stock-page td {
+  min-width: 110px;
+  overflow-wrap: anywhere;
+}
+.stock-page td:first-child {
+  min-width: 165px;
+}
+.stock-page td button,
+.stock-pagination button {
+  border: 1px solid #b8cad5;
+  border-radius: 6px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+.stock-low,
+.stock-ok {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 9px;
+  white-space: nowrap;
+  font-size: 12px;
+  background: #fff0d6;
+  color: #81580c;
+}
+.stock-ok {
+  background: #e4f4e9;
+  color: #286244;
+}
+.stock-error {
+  padding: 15px;
+  background: #ffebe9;
+  border-radius: 8px;
+  color: #97392d !important;
+}
+.stock-success {
+  padding: 15px;
+  background: #e4f4e9;
+  border-radius: 8px;
+  color: #286244 !important;
+}
+.stock-help {
+  font-size: 12px;
+}
+.stock-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+.stock-empty {
+  padding: 26px 0;
+}
+.stock-page a:focus-visible,
+.stock-page button:focus-visible {
+  outline: 3px solid #549fc8;
+  outline-offset: 3px;
+}
+.stock-page td a {
+  color: #12658f;
+  text-decoration: underline;
+}
+@media (max-width: 760px) {
+  .stock-page {
+    padding: 22px 14px;
+  }
+  .stock-page h1 {
+    font-size: 28px;
+  }
+  .stock-page header,
+  .stock-section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .stock-stats {
+    grid-template-columns: 1fr;
+  }
+  .stock-forms {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .stock-card {
+    padding: 18px;
+  }
+  .stock-section-title label {
+    width: 100%;
+  }
+  .stock-pagination {
+    font-size: 12px;
+  }
+  .stock-page header .stock-button {
+    align-self: flex-start;
+  }
+}
