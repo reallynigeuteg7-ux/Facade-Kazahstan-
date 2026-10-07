@@ -33,7 +33,7 @@ export default async function Detail({
 }) {
   const { slug } = await params;
   const direction = directions[slug];
-  if (direction) return <><Header /><main><DirectionPage direction={direction} videos={slug === 'fasadnye-resheniya' ? <ProjectVideos /> : undefined} /><Contact /></main><Footer /></>;
+  if (direction) return <><Header /><main><DirectionPage direction={direction} videos={<ProjectVideos direction={slug} />} /><Contact /></main><Footer /></>;
   const p = (data.pages as Record<string, Page>)[slug];
   if (!p) notFound();
   return (
