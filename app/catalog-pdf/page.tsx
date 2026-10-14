@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Header, Footer } from '../site';
 import Viewer from './viewer';
-export const metadata = { title: 'Каталог 29.08.2026 — Facade Kazahstan' };
+import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('PDF-каталог продукции — Facade Kazakhstan', 'Каталог Facade Kazakhstan: скамейки, урны, светильники и другие металлоизделия. Фотографии, размеры и комплекты для благоустройства.', '/catalog-pdf', '/catalog-document/page-1.jpg');
 export default function Page() {
   return (
     <>

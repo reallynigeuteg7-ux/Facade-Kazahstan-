@@ -12,9 +12,9 @@ export function Header() {
         </span>
       </div>
       <header className="header">
-        <Link className="logo" href="/" aria-label="Facade Kazahstan — главная">
+        <Link className="logo" href="/" aria-label="Facade Kazakhstan — главная">
           <span className="brand-logo">
-            <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan KZO" width={412} height={320} />
+            <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} />
           </span>
         </Link>
         <nav aria-label="Главное меню">
@@ -103,13 +103,13 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <Link href="/" className="logo" aria-label="Facade Kazahstan — главная">
+        <Link href="/" className="logo" aria-label="Facade Kazakhstan — главная">
           <span className="brand-logo">
-            <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan KZO" width={412} height={320} />
+            <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} />
           </span>
         </Link>
         <p>
-          Компания Facade Kazahstan производит металлоизделия и поставляет их по
+          Компания Facade Kazakhstan производит металлоизделия и поставляет их по
           всему Казахстану на выгодных условиях
         </p>
         <div>
@@ -129,7 +129,7 @@ export function Footer() {
         FACADE<span>↗</span>
       </div>
       <div className="footer-bottom">
-        <span>FACADE KAZAHSTAN</span>
+        <span>FACADE KAZAKHSTAN</span>
         <Link href="/catalog-pdf">Каталог в PDF ↗</Link>
         <span>Металл. Форма. Пространство.</span>
       </div>

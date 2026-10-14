@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "seo:check": "node scripts/verify-seo.mjs",
     "lint": "oxlint",
     "format": "oxfmt",
     "db:migrate": "node scripts/migrate.mjs"

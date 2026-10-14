@@ -5,18 +5,20 @@ import { Header, Footer, Catalog, Contact } from './site';
 import OpenChat from './open-chat';
 import { directions } from './directions';
 import ProjectVideos from './project-videos';
+import { brandSchema, jsonLd } from '@/lib/seo';
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(brandSchema) }} />
       <Header />
       <main>
         <section className="hero">
           <div className="hero-content">
             <div className="eyebrow">
-              <span className="status-dot" /> FACADE KAZAHSTAN
+              <span className="status-dot" /> FACADE KAZAKHSTAN
             </div>
             <h1>{data.title}</h1>
-            <p>Металлоизделия для фасадов и благоустройства. Изготовление по вашим размерам и поставки по Казахстану.</p>
+            <p>Facade Kazakhstan — производство металлоизделий в Кызылорде. Фасады и благоустройство по вашим размерам, поставки по Казахстану.</p>
             <div className="actions">
               <Link className="button" href="/catalog">
                 Перейти в каталог <span>↗</span>
@@ -90,9 +92,9 @@ export default function Home() {
         <section className="about section">
           <div className="about-aside">
             <span className="eyebrow">02 / О КОМПАНИИ</span>
-            <img className="about-brand-logo" src="/facade-logo-black.svg" alt="Facade Kazakhstan KZO" loading="lazy" />
+            <SiteImage className="about-brand-logo" src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} loading="lazy" />
             <span className="about-location">
-              FACADE KAZAHSTAN
+              FACADE KAZAKHSTAN
               <br />
               КЫЗЫЛОРДА
             </span>
@@ -160,7 +162,7 @@ export default function Home() {
         <section className="section essay">
           <details>
             <summary>
-              Компания Facade Kazahstan <span>+</span>
+              Компания Facade Kazakhstan <span>+</span>
             </summary>
             <p>{data.essay}</p>
           </details>

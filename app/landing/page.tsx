@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Facade Kazahstan — производство металлоизделий',
   description: 'Производим фасадные решения, малые архитектурные формы и металлоконструкции в Кызылорде. Лазерная резка, гибка и порошковая покраска. Работаем по всему Казахстану.',
   alternates: { canonical: '/landing' },
+  robots: { index: false, follow: true },
 };
 function Logo() {return <span className={s.logo}><img src="/facade-original-logo.png" alt="Facade Kazahstan" width="527" height="147" /></span>;}
 const services = [
