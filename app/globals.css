@@ -367,22 +367,6 @@ sup {
   height: 310px;
   object-fit: cover;
 }
-.essay {
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-.essay summary {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-}
-.essay p {
-  white-space: pre-line;
-  max-width: 960px;
-  font-size: 16px;
-  color: #596165;
-}
 .contact {
   background: #e7ebe8;
   display: grid;
@@ -472,37 +456,6 @@ sup {
 }
 .detail-hero h1 {
   max-width: 1000px;
-}
-.detail-section {
-  padding: 45px 6%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  border-bottom: 1px solid var(--border);
-}
-.detail-section:not(:has(img)) {
-  display: block;
-}
-.detail-section:not(:has(img)) .detail-copy {
-  max-width: 76ch;
-}
-.detail-section p {
-  white-space: pre-line;
-}
-.detail-section img {
-  max-height: 550px;
-  object-fit: contain;
-  width: 100%;
-  background: #e9edeb;
-}
-.detail-copy {
-  font-size: 18px;
-}
-.detail-copy p:first-child {
-  margin-top: 0;
-}
-.empty-note {
-  padding-block: 45px;
 }
 @media (max-width: 1180px) {
   .header {
@@ -626,10 +579,6 @@ sup {
   }
   .footer {
     grid-template-columns: 1fr 1fr;
-  }
-  .detail-section {
-    grid-template-columns: 1fr;
-    gap: 25px;
   }
   .detail-hero h1 {
     font-size: 40px;

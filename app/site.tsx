@@ -64,6 +64,27 @@ export function Catalog() {
     </div>
   );
 }
+type InfoItem = { title: string; text: string };
+
+export function InfoCards({ title, items }: { title: string; items: InfoItem[] }) {
+  return (
+    <section className="info-cards site-container">
+      <h2>{title}</h2>
+      <ol className="info-cards-grid">
+        {items.map((item, i) => (
+          <li key={item.title}>
+            <span className="info-card-number" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 export function Contact() {
   return (
     <section className="contact section site-container" id="contact">

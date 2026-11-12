@@ -2,6 +2,7 @@ import type { ImgHTMLAttributes } from 'react';
 export default function SiteImage({
   src,
   alt = '',
+  sizes,
   ...props
 }: ImgHTMLAttributes<HTMLImageElement>) {
   const responsive =
@@ -25,9 +26,9 @@ export default function SiteImage({
           : undefined
       }
       sizes={
-        responsive
+        sizes ?? (responsive
           ? '(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 50vw'
-          : undefined
+          : undefined)
       }
     />
   );

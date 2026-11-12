@@ -1,8 +1,8 @@
 import SiteImage from '@/app/site-image';
 import Link from 'next/link';
-import { ArrowDownLeft, ArrowRight, ChevronDown, CornerDownRight, MessageCircle, ZoomIn } from 'lucide-react';
+import { ArrowDownLeft, ArrowRight, CornerDownRight, MessageCircle, ZoomIn } from 'lucide-react';
 import data from './content.json';
-import { Header, Footer, Catalog, Contact } from './site';
+import { Header, Footer, Catalog, Contact, InfoCards } from './site';
 import OpenChat from './open-chat';
 import { directions } from './directions';
 import ProjectVideos from './project-videos';
@@ -156,14 +156,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="section essay site-container">
-          <details>
-            <summary>
-              Компания Facade Kazakhstan <ChevronDown size={19} aria-hidden />
-            </summary>
-            <p>{data.essay}</p>
-          </details>
-        </section>
+        <InfoCards title="Как оформить заказ" items={data.orderSteps} />
         <Contact />
       </main>
       <Footer />
