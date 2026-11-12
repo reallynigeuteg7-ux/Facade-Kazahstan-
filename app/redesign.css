@@ -7,6 +7,12 @@
   --muted: #717669;
   --ink: #22251f;
   --lime: #d7ef63;
+  --site-max-width: 1480px;
+  --site-gutter: clamp(12px, 3vw, 48px);
+}
+.site-container {
+  width: min(var(--site-max-width), calc(100% - 2 * var(--site-gutter)));
+  margin-inline: auto;
 }
 body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
@@ -23,7 +29,8 @@ summary:focus-visible {
   outline-color: #6c822b;
 }
 .utility-bar {
-  padding: 9px 4%;
+  padding-block: 9px;
+  padding-inline: max(var(--site-gutter), calc((100% - var(--site-max-width)) / 2));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,7 +111,7 @@ summary:focus-visible {
   max-height: none;
   background: transparent;
   color: var(--ink);
-  padding: 20px 4% 32px;
+  padding: 20px 0 32px;
   align-items: stretch;
 }
 .hero-content {
@@ -284,7 +291,6 @@ summary:focus-visible {
   letter-spacing: 1.8px;
 }
 .direction-rail {
-  margin: 0 4%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--border);
@@ -316,7 +322,7 @@ summary:focus-visible {
   color: #7a9029;
 }
 .section {
-  padding: 88px 4%;
+  padding: 88px 0;
 }
 .section-head {
   margin-bottom: 36px;
@@ -446,7 +452,6 @@ sup {
   color: #6c822b;
 }
 .about {
-  margin: 0 4%;
   padding: 55px;
   border: 0;
   border-radius: 13px;
@@ -553,8 +558,7 @@ sup {
   background: #252b23;
   color: #f5f6ed;
   border-radius: 16px;
-  margin: 0 16px;
-  padding: 70px calc(4vw - 16px);
+  padding: 70px clamp(16px, 4vw, 70px);
 }
 .projects .section-head .eyebrow {
   color: #aab59b;
@@ -671,6 +675,8 @@ sup {
 .contact-form .button {
   width: 100%;
   margin-top: 20px;
+  white-space: normal;
+  text-align: left;
 }
 .contact-whatsapp {
   display: flex;
@@ -686,7 +692,7 @@ sup {
   display: block;
   background: #252b23;
   color: #b1bca5;
-  padding: 45px 4% 25px;
+  padding: 45px 0 25px;
 }
 .footer-top {
   display: grid;
@@ -762,14 +768,16 @@ sup {
   font-size: 9px;
 }
 .detail-hero {
-  padding: 45px 4% 60px;
+  padding: 45px clamp(18px, 3vw, 50px) 60px;
   background: #e8ecde;
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: 13px;
 }
 .detail-hero h1 {
   font-weight: 450;
   font-size: clamp(40px, 5vw, 72px);
   letter-spacing: -2px;
+  overflow-wrap: anywhere;
 }
 .crumb {
   color: #738064;
@@ -777,7 +785,8 @@ sup {
   margin-bottom: 32px;
 }
 .detail-section {
-  padding: 40px 4%;
+  padding: 40px 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
 }
 .detail-copy {
@@ -793,7 +802,6 @@ sup {
   font-weight: 550;
 }
 .document-main {
-  max-width: 1120px;
   padding-top: 45px;
 }
 .document-main h1 {
@@ -885,35 +893,8 @@ sup {
   color: var(--ink);
 }
 @media (min-width: 1600px) {
-  .header,
-  .utility-bar {
-    padding-left: max(4%, calc((100vw - 1480px) /2));
-    padding-right: max(4%, calc((100vw - 1480px) /2));
-  }
-  .hero,
-  .direction-rail,
-  main > .section {
-    max-width: 1480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .section {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .about {
-    padding: 65px !important;
-  }
-  .projects {
-    padding: 70px !important;
-  }
-  .direction-rail {
-    margin-left: auto;
-    margin-right: auto;
+  .section.about {
+    padding: 65px;
   }
 }
 @media (max-width: 1180px) {
@@ -982,7 +963,6 @@ sup {
 @media (max-width: 800px) {
   .utility-bar {
     font-size: 8px;
-    padding: 9px 5%;
   }
   .utility-bar > span:last-child {
     gap: 8px;
@@ -1017,7 +997,7 @@ sup {
   }
   .hero {
     grid-template-columns: 1fr;
-    padding: 14px 5% 25px;
+    padding: 14px 0 25px;
     gap: 20px;
   }
   .hero-content {
@@ -1057,9 +1037,6 @@ sup {
     left: 22px;
     bottom: 21px;
   }
-  .direction-rail {
-    margin: 0 5%;
-  }
   .direction-rail a {
     font-size: 11px;
     gap: 9px;
@@ -1072,7 +1049,7 @@ sup {
     font-size: 18px;
   }
   .section {
-    padding: 58px 5%;
+    padding: 58px 0;
   }
   .section-head {
     display: flex;
@@ -1123,7 +1100,6 @@ sup {
     grid-template-columns: 1fr 2fr;
     gap: 30px;
     padding: 32px;
-    margin: 0 5%;
   }
   .about h2 {
     margin: 0;
@@ -1157,8 +1133,7 @@ sup {
     padding: 18px;
   }
   .projects {
-    margin: 0 10px;
-    padding: 45px calc(5vw - 10px);
+    padding: 45px clamp(16px, 4vw, 32px);
     border-radius: 11px;
   }
   .projects-arrow {
@@ -1196,7 +1171,7 @@ sup {
     font-size: 21px;
   }
   .footer {
-    padding: 35px 5% 23px;
+    padding: 35px 0 23px;
   }
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -1219,14 +1194,14 @@ sup {
     font-size: 8px !important;
   }
   .detail-hero {
-    padding: 35px 5% 45px;
+    padding-block: 28px 34px;
   }
   .detail-hero h1 {
-    font-size: 42px;
+    font-size: clamp(29px, 6vw, 42px);
   }
   .detail-section {
-    grid-template-columns: 1fr;
-    padding: 30px 5%;
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 30px;
     gap: 22px;
   }
 }
@@ -1383,11 +1358,11 @@ sup {
     height: 330px;
   }
   .contact {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 30px;
   }
   .contact h2 {
-    font-size: 66px;
+    font-size: clamp(48px, 16vw, 66px);
   }
   .contact p {
     font-size: 14px;
@@ -1489,7 +1464,7 @@ select {
   position: sticky;
   top: 12px;
   z-index: 30;
-  margin: 14px 3% 8px;
+  margin-block: 14px 8px;
   padding: 12px 20px;
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 18px;
@@ -1539,9 +1514,6 @@ html {
 }
 @media (min-width: 1600px) {
   .header {
-    max-width: 1480px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 12px 24px;
   }
 }
@@ -1557,7 +1529,7 @@ html {
 @media (max-width: 800px) {
   .header {
     top: 8px;
-    margin: 10px 3% 6px;
+    margin-block: 10px 6px;
     padding: 10px 15px;
     gap: 8px 12px;
     border-radius: 16px;
@@ -1594,7 +1566,7 @@ html {
     gap: 8px;
   }
   .hero h1 {
-    font-size: 42px;
+    font-size: clamp(36px, 10.8vw, 42px);
     letter-spacing: -0.052em;
   }
   .actions {

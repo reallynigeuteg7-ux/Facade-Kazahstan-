@@ -11,7 +11,7 @@ export function Header() {
           Кызылорда <i /> По всему Казахстану
         </span>
       </div>
-      <header className="header">
+      <header className="header site-container">
         <Link className="logo" href="/" aria-label="Facade Kazakhstan — главная">
           <span className="brand-logo">
             <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} />
@@ -65,7 +65,7 @@ export function Catalog() {
 }
 export function Contact() {
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section site-container" id="contact">
       <div>
         <span className="eyebrow">05 / КОНТАКТЫ</span>
         <h2>
@@ -102,7 +102,7 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-top">
+      <div className="footer-top site-container">
         <Link href="/" className="logo" aria-label="Facade Kazakhstan — главная">
           <span className="brand-logo">
             <SiteImage src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} />
@@ -125,10 +125,10 @@ export function Footer() {
           <Link href="/#contact">Контакты</Link>
         </nav>
       </div>
-      <div className="footer-wordmark" aria-hidden="true">
+      <div className="footer-wordmark site-container" aria-hidden="true">
         FACADE<span>↗</span>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom site-container">
         <span>FACADE KAZAKHSTAN</span>
         <Link href="/catalog-pdf">Каталог в PDF ↗</Link>
         <span>Металл. Форма. Пространство.</span>

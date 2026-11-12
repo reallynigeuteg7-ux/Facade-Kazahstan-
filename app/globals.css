@@ -473,10 +473,6 @@ sup {
 .detail-hero h1 {
   max-width: 1000px;
 }
-.detail-main {
-  max-width: 1400px;
-  margin: auto;
-}
 .detail-section {
   padding: 45px 6%;
   display: grid;
@@ -486,7 +482,9 @@ sup {
 }
 .detail-section:not(:has(img)) {
   display: block;
-  max-width: 1050px;
+}
+.detail-section:not(:has(img)) .detail-copy {
+  max-width: 76ch;
 }
 .detail-section p {
   white-space: pre-line;
@@ -504,7 +502,7 @@ sup {
   margin-top: 0;
 }
 .empty-note {
-  padding: 45px 6%;
+  padding-block: 45px;
 }
 @media (max-width: 1180px) {
   .header {
@@ -882,9 +880,7 @@ sup {
   margin: 12px 0 0;
 }
 .document-main {
-  max-width: 1120px;
-  margin: auto;
-  padding: 45px 5% 70px;
+  padding-block: 45px 70px;
 }
 .document-main h1 {
   font-size: 44px;

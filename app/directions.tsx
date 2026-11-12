@@ -56,7 +56,7 @@ export const directions: Record<string, Direction> = {
 
 export function DirectionPage({ direction, videos }: { direction: Direction; videos?: React.ReactNode }) {
   return (
-    <div className={styles.container}>
+    <div className={`site-container ${styles.container}`}>
       <Link href="/" className={styles.back}>← Главная</Link>
       <section className={styles.intro}>
         <div><span className="eyebrow">FACADE / НАПРАВЛЕНИЯ</span><h1>{direction.title}</h1></div>

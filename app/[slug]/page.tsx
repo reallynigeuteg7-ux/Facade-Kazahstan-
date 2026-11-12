@@ -60,7 +60,7 @@ export default async function Detail({
       <Header />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema(p.title, `/${slug}`)) }} />
-        <section className="detail-hero">
+        <section className="detail-hero site-container">
           <a className="crumb" href={slug === 'catalog' ? '/' : '/catalog'}>
             Главная / Каталог продукции
           </a>
@@ -72,11 +72,11 @@ export default async function Detail({
           )}
         </section>
         {slug === 'catalog' ? (
-          <section className="section">
+          <section className="section site-container">
             <Catalog />
           </section>
         ) : (
-          <div className="detail-main">
+          <div className="site-container">
             {p.unavailable && (
               <p className="empty-note">
                 Информация уточняется. Свяжитесь с нами, чтобы узнать
@@ -85,16 +85,20 @@ export default async function Detail({
             )}
             {p.sections.map((s, i) => (
               <section className="detail-section" key={i}>
-                <div className="detail-copy">
-                  {s.text.map((t, j) => (
-                    <p key={j}>{t}</p>
-                  ))}
-                </div>
-                <div>
-                  {s.images.map((u) => (
-                    <SiteImage key={u} src={u} alt={p.title} loading="lazy" />
-                  ))}
-                </div>
+                {s.text.length > 0 && (
+                  <div className="detail-copy">
+                    {s.text.map((t, j) => (
+                      <p key={j}>{t}</p>
+                    ))}
+                  </div>
+                )}
+                {s.images.length > 0 && (
+                  <div>
+                    {s.images.map((u) => (
+                      <SiteImage key={u} src={u} alt={p.title} loading="lazy" />
+                    ))}
+                  </div>
+                )}
                 {s.cards.map((c, j) => (
                   <article key={j}>
                     <h3>{c.title}</h3>

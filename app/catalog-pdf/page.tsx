@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <main className="document-main">
+      <main className="document-main site-container">
         <Link className="crumb" href="/catalog">
           ← Каталог продукции
         </Link>

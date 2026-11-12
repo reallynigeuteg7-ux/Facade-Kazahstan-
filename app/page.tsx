@@ -12,7 +12,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(brandSchema) }} />
       <Header />
       <main>
-        <section className="hero">
+        <section className="hero site-container">
           <div className="hero-content">
             <div className="eyebrow">
               <span className="status-dot" /> FACADE KAZAKHSTAN
@@ -61,7 +61,7 @@ export default function Home() {
             <span className="visual-coordinate">КЫЗЫЛОРДА · КАЗАХСТАН</span>
           </div>
         </section>
-        <div className="direction-rail direction-previews">
+        <div className="direction-rail direction-previews site-container">
           <Link href="/fasadnye-resheniya">
             <SiteImage src={directions['fasadnye-resheniya'].photos[0][0]} alt="Фасадные решения" loading="lazy" />
             <div className="direction-preview-caption"><span>01</span> Фасадные решения <b>↗</b></div>
@@ -75,7 +75,7 @@ export default function Home() {
             <div className="direction-preview-caption"><span>03</span> Обработка металла <b>↗</b></div>
           </Link>
         </div>
-        <section className="section" id="catalog">
+        <section className="section site-container" id="catalog">
           <div className="section-head">
             <div>
               <span className="eyebrow">01 / ПРОДУКЦИЯ</span>
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <Catalog />
         </section>
-        <section className="about section">
+        <section className="about section site-container">
           <div className="about-aside">
             <span className="eyebrow">02 / О КОМПАНИИ</span>
             <SiteImage className="about-brand-logo" src="/facade-logo-black.svg" alt="Facade Kazakhstan" width={412} height={320} loading="lazy" />
@@ -107,7 +107,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <section className="section" id="uslugi">
+        <section className="section site-container" id="uslugi">
           <div className="section-head">
             <div>
               <span className="eyebrow">03 / ПРОИЗВОДСТВО</span>
@@ -132,7 +132,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="section projects" id="raboty">
+        <section className="section projects site-container" id="raboty">
           <div className="section-head">
             <div>
               <span className="eyebrow">04 / РАБОТЫ</span>
@@ -159,7 +159,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="section essay">
+        <section className="section essay site-container">
           <details>
             <summary>
               Компания Facade Kazakhstan <span>+</span>
