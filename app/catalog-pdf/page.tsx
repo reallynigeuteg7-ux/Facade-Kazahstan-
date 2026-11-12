@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import { Header, Footer } from '../site';
 import Viewer from './viewer';
 import { pageMetadata } from '@/lib/seo';
@@ -9,7 +10,7 @@ export default function Page() {
       <Header />
       <main className="document-main site-container">
         <Link className="crumb" href="/catalog">
-          ← Каталог продукции
+          <ArrowLeft className="text-icon" size={15} aria-hidden /> Каталог продукции
         </Link>
         <h1>Каталог продукции</h1>
         <p>Каталог от 29.08.2026 · 22 страницы</p>

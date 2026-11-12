@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { MessageCircle, Send, X } from 'lucide-react';
 import {
   Sheet,
   SheetTrigger,
@@ -334,7 +335,7 @@ export default function Chat() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="chat-launch">
-        {t.launch} <span>↗</span>
+        {t.launch} <span aria-hidden="true"><MessageCircle size={14} /></span>
       </SheetTrigger>
       <SheetContent
         className="chat-panel"
@@ -347,7 +348,7 @@ export default function Chat() {
             <SheetDescription>{t.subtitle}</SheetDescription>
           </div>
           <SheetClose className="chat-close" aria-label={t.close}>
-            ×
+            <X size={23} aria-hidden />
           </SheetClose>
         </SheetHeader>
         <div className="chat-language" role="group" aria-label={t.language}>
@@ -580,7 +581,7 @@ export default function Chat() {
               type="submit"
               disabled={asking || !hydrated}
             >
-              ↑
+              <Send size={17} aria-hidden />
             </button>
             {error && <p role="alert">{error}</p>}
             {answers.length > 0 && !needsPhone && (

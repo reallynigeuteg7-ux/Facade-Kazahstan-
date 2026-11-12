@@ -1,5 +1,6 @@
 import SiteImage from '@/app/site-image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import data from '../content.json';
 import { Header, Footer, Catalog, Contact } from '../site';
 import { notFound } from 'next/navigation';
@@ -67,7 +68,7 @@ export default async function Detail({
           <h1>{p.title}</h1>
           {slug !== 'catalog' && (
             <Link className="button" href="/#contact">
-              Связаться с нами ↗
+              Связаться с нами <ArrowRight size={17} aria-hidden />
             </Link>
           )}
         </section>
@@ -106,7 +107,7 @@ export default async function Detail({
                     {c.images.map((u) => (
                       <SiteImage key={u} src={u} alt={c.title} loading="lazy" />
                     ))}
-                    <a href={c.href || '/#contact'}>Подробнее ↗</a>
+                    <a href={c.href || '/#contact'}>Подробнее <ArrowRight className="text-icon" size={14} aria-hidden /></a>
                   </article>
                 ))}
               </section>

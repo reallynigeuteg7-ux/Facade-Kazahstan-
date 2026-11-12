@@ -1,5 +1,6 @@
 import SiteImage from '@/app/site-image';
 import Link from 'next/link';
+import { ArrowDownLeft, ArrowRight, ChevronDown, CornerDownRight, MessageCircle, ZoomIn } from 'lucide-react';
 import data from './content.json';
 import { Header, Footer, Catalog, Contact } from './site';
 import OpenChat from './open-chat';
@@ -21,16 +22,14 @@ export default function Home() {
             <p>Facade Kazakhstan — производство металлоизделий в Кызылорде. Фасады и благоустройство по вашим размерам, поставки по Казахстану.</p>
             <div className="actions">
               <Link className="button" href="/catalog">
-                Перейти в каталог <span>↗</span>
+                Перейти в каталог <ArrowRight size={19} aria-hidden />
               </Link>
               <OpenChat className="hero-chat">
-                Обсудить проект <span>↗</span>
+                Обсудить проект <MessageCircle className="text-icon" size={15} aria-hidden />
               </OpenChat>
             </div>
             <div className="hero-caption">
-              <span className="hero-caption-mark" aria-hidden="true">
-                ↳
-              </span>
+              <CornerDownRight className="hero-caption-mark" size={25} aria-hidden />
               <span>
                 Современное оборудование.
                 <br />
@@ -51,7 +50,7 @@ export default function Home() {
             </div>
             <Link href="/fasadnye-resheniya" className="hero-feature">
               <span className="feature-icon" aria-hidden="true">
-                ↗
+                <ArrowRight size={25} />
               </span>
               <div>
                 <small>ДЕТАЛИ, КОТОРЫЕ МЕНЯЮТ ОБЛИК</small>
@@ -64,15 +63,15 @@ export default function Home() {
         <div className="direction-rail direction-previews site-container">
           <Link href="/fasadnye-resheniya">
             <SiteImage src={directions['fasadnye-resheniya'].photos[0][0]} alt="Фасадные решения" loading="lazy" />
-            <div className="direction-preview-caption"><span>01</span> Фасадные решения <b>↗</b></div>
+            <div className="direction-preview-caption"><span>01</span> Фасадные решения <ArrowRight size={18} aria-hidden /></div>
           </Link>
           <Link href="/blagoustroystvo">
             <SiteImage src={directions.blagoustroystvo.photos[0][0]} alt="Благоустройство" loading="lazy" />
-            <div className="direction-preview-caption"><span>02</span> Благоустройство <b>↗</b></div>
+            <div className="direction-preview-caption"><span>02</span> Благоустройство <ArrowRight size={18} aria-hidden /></div>
           </Link>
           <Link href="/obrabotka-metalla">
             <SiteImage src={directions['obrabotka-metalla'].photos[0][0]} alt="Обработка металла" loading="lazy" />
-            <div className="direction-preview-caption"><span>03</span> Обработка металла <b>↗</b></div>
+            <div className="direction-preview-caption"><span>03</span> Обработка металла <ArrowRight size={18} aria-hidden /></div>
           </Link>
         </div>
         <section className="section site-container" id="catalog">
@@ -84,7 +83,7 @@ export default function Home() {
               </h2>
             </div>
             <Link className="section-link" href="/catalog-pdf">
-              Смотреть PDF-каталог <span>↗</span>
+              Смотреть PDF-каталог <ArrowRight size={17} aria-hidden />
             </Link>
           </div>
           <Catalog />
@@ -103,7 +102,7 @@ export default function Home() {
             <h2>О нас</h2>
             <p>{data.about}</p>
             <Link className="text-link" href="/o-kompanii">
-              Подробнее ↗
+              Подробнее <ArrowRight className="text-icon" size={14} aria-hidden />
             </Link>
           </div>
         </section>
@@ -114,7 +113,7 @@ export default function Home() {
               <h2>Наши услуги</h2>
             </div>
             <OpenChat className="section-link">
-              Обсудить задачу <span>↗</span>
+              Обсудить задачу <MessageCircle size={17} aria-hidden />
             </OpenChat>
           </div>
           <div className="service-grid">
@@ -126,7 +125,7 @@ export default function Home() {
                 </div>
                 <div className="service-title">
                   <h3>{c.title}</h3>
-                  <span>↗</span>
+                  <ArrowRight size={20} aria-hidden />
                 </div>
               </a>
             ))}
@@ -138,9 +137,7 @@ export default function Home() {
               <span className="eyebrow">04 / РАБОТЫ</span>
               <h2>Галерея проектов</h2>
             </div>
-            <span className="projects-arrow" aria-hidden="true">
-              ↙
-            </span>
+            <ArrowDownLeft className="projects-arrow" strokeWidth={1.5} aria-hidden />
           </div>
           <p>
             Посмотрите на нашу продукцию в различных проектах и узнайте, как она
@@ -153,7 +150,7 @@ export default function Home() {
                 <SiteImage src={u} alt={'Проект ' + (i + 1)} loading="lazy" />
                 <span className="gallery-caption">
                   FACADE / {String(i + 1).padStart(2, '0')}
-                  <b>↗</b>
+                  <ZoomIn size={19} aria-hidden />
                 </span>
               </a>
             ))}
@@ -162,7 +159,7 @@ export default function Home() {
         <section className="section essay site-container">
           <details>
             <summary>
-              Компания Facade Kazakhstan <span>+</span>
+              Компания Facade Kazakhstan <ChevronDown size={19} aria-hidden />
             </summary>
             <p>{data.essay}</p>
           </details>

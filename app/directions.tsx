@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowLeft, ArrowRight, MessageCircle, ZoomIn } from 'lucide-react';
 import SiteImage from './site-image';
 import OpenChat from './open-chat';
 import styles from './directions.module.css';
@@ -57,16 +58,16 @@ export const directions: Record<string, Direction> = {
 export function DirectionPage({ direction, videos }: { direction: Direction; videos?: React.ReactNode }) {
   return (
     <div className={`site-container ${styles.container}`}>
-      <Link href="/" className={styles.back}>← Главная</Link>
+      <Link href="/" className={styles.back}><ArrowLeft size={15} aria-hidden /> Главная</Link>
       <section className={styles.intro}>
         <div><span className="eyebrow">FACADE / НАПРАВЛЕНИЯ</span><h1>{direction.title}</h1></div>
         <div className={styles.copy}>
           <p>{direction.description}</p>
-          <OpenChat className="button">Обсудить проект <span>↗</span></OpenChat>
+          <OpenChat className="button">Обсудить проект <MessageCircle size={17} aria-hidden /></OpenChat>
         </div>
       </section>
       <nav className={styles.links} aria-label="Продукция и услуги направления">
-        {direction.links.map(([href, title]) => <Link href={href} key={href}>{title}<span>↗</span></Link>)}
+        {direction.links.map(([href, title]) => <Link href={href} key={href}>{title}<ArrowRight size={15} aria-hidden /></Link>)}
       </nav>
       {videos}
       <section className={styles.gallery} aria-label={`Фотогалерея: ${direction.title}`}>
@@ -74,7 +75,7 @@ export function DirectionPage({ direction, videos }: { direction: Direction; vid
           <figure key={src}>
             <a href={src} target="_blank" rel="noreferrer" aria-label={`Открыть фото: ${title}`}>
               <SiteImage src={src} alt={title} loading={i < 2 ? 'eager' : 'lazy'} />
-              <span className={styles.zoom} aria-hidden="true">↗</span>
+              <span className={styles.zoom} aria-hidden="true"><ZoomIn size={18} /></span>
             </a>
             <figcaption><span>{String(i + 1).padStart(2, '0')}</span>{title}</figcaption>
           </figure>

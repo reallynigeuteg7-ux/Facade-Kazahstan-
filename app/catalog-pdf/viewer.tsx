@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import info from '../catalog-document.json';
 import { Button } from '@/components/ui/button';
 export default function Viewer() {
@@ -60,7 +61,7 @@ export default function Viewer() {
             onClick={() => setPage(page - 1)}
             aria-label="Предыдущая страница"
           >
-            ←
+            <ChevronLeft className="size-5" aria-hidden />
           </Button>
           <span aria-live="polite">
             Страница {page} из {info.pages}
@@ -71,7 +72,7 @@ export default function Viewer() {
             onClick={() => setPage(page + 1)}
             aria-label="Следующая страница"
           >
-            →
+            <ChevronRight className="size-5" aria-hidden />
           </Button>
         </div>
         <Button
@@ -79,7 +80,8 @@ export default function Viewer() {
           disabled={loading}
           className="document-download"
         >
-          {loading ? 'Загружаем PDF…' : `Скачать PDF · ${Math.ceil(info.bytes / 1024 / 1024)} МБ ↓`}
+          <Download size={17} aria-hidden />
+          {loading ? 'Загружаем PDF…' : `Скачать PDF · ${Math.ceil(info.bytes / 1024 / 1024)} МБ`}
         </Button>
       </div>
       {error && <p role="alert">{error}</p>}

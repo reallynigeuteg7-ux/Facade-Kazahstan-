@@ -1,5 +1,6 @@
 import SiteImage from '@/app/site-image';
 import Link from 'next/link';
+import { ArrowRight, ArrowUpRight, ExternalLink, MessageCircle, Phone } from 'lucide-react';
 import data from './content.json';
 import OpenChat from './open-chat';
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
           +7 776 577 36 66
         </a>
         <OpenChat className="header-cta">
-          Обсудить заказ <span>↗</span>
+          Обсудить заказ <MessageCircle size={17} aria-hidden />
         </OpenChat>
       </header>
     </>
@@ -45,7 +46,7 @@ export function Catalog() {
             </span>
             <SiteImage src={c.images[0]} alt={c.title} loading="lazy" />
             <span className="round-arrow" aria-hidden="true">
-              ↗
+              <ArrowRight size={17} />
             </span>
           </a>
           <div className="card-copy">
@@ -54,7 +55,7 @@ export function Catalog() {
             </h3>
             <p>{c.description}</p>
             <div className="card-actions">
-              <a href={c.href}>Подробнее ↗</a>
+              <a href={c.href}>Подробнее <ArrowRight className="text-icon" size={13} aria-hidden /></a>
               <a href="https://wa.me/77765773666">Написать на WhatsApp</a>
             </div>
           </div>
@@ -77,12 +78,12 @@ export function Contact() {
           связаться с нами? Мы всегда рады помочь.
         </p>
         <a className="contact-phone" href="tel:+77765773666">
-          +7 776 577 36 66 ↗
+          +7 776 577 36 66 <Phone className="text-icon" size={20} aria-hidden />
         </a>
       </div>
       <div className="contact-form">
         <span className="contact-icon" aria-hidden="true">
-          ↗
+          <MessageCircle size={23} />
         </span>
         <h3>Нужна консультация по подбору МАФов и металлоизделий?</h3>
         <p>
@@ -90,10 +91,10 @@ export function Contact() {
           менеджеру для уточнения стоимости и деталей заказа.
         </p>
         <OpenChat>
-          Обсудить заказ с помощником <span>↗</span>
+          Обсудить заказ с помощником <MessageCircle size={18} aria-hidden />
         </OpenChat>
         <a className="contact-whatsapp" href="https://wa.me/77765773666">
-          Написать на WhatsApp <span>↗</span>
+          Написать на WhatsApp <ExternalLink size={16} aria-hidden />
         </a>
       </div>
     </section>
@@ -126,11 +127,11 @@ export function Footer() {
         </nav>
       </div>
       <div className="footer-wordmark site-container" aria-hidden="true">
-        FACADE<span>↗</span>
+        FACADE<ArrowUpRight className="footer-mark" strokeWidth={1.5} />
       </div>
       <div className="footer-bottom site-container">
         <span>FACADE KAZAKHSTAN</span>
-        <Link href="/catalog-pdf">Каталог в PDF ↗</Link>
+        <Link href="/catalog-pdf">Каталог в PDF <ArrowRight className="text-icon" size={13} aria-hidden /></Link>
         <span>Металл. Форма. Пространство.</span>
       </div>
     </footer>

@@ -6,6 +6,7 @@ import {
 } from '@/lib/drawings/templates.mjs';
 import { resolveEditedWarnings } from '@/lib/drawings/edit.mjs';
 import { useMemo, useState, useEffect, useRef } from 'react';
+import { Download } from 'lucide-react';
 import SolidViewer from './solid-viewer';
 import {
   defaultCamera,
@@ -570,7 +571,7 @@ export default function DrawingPanel({
               className="drawing-download"
               onClick={download}
             >
-              {tr('Скачать чертёж SVG ↓')}
+              <Download className="text-icon" size={14} aria-hidden /> {tr('Скачать чертёж SVG')}
             </button>
           </div>
           <p className="chat-mode">
