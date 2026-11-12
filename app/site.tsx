@@ -1,6 +1,6 @@
 import SiteImage from '@/app/site-image';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, ExternalLink, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, ExternalLink, Factory, MessageCircle, Phone } from 'lucide-react';
 import data from './content.json';
 import OpenChat from './open-chat';
 export function Header() {
@@ -127,7 +127,7 @@ export function Footer() {
         </nav>
       </div>
       <div className="footer-wordmark site-container" aria-hidden="true">
-        FACADE<ArrowUpRight className="footer-mark" strokeWidth={1.5} />
+        FACADE<Factory className="footer-mark" strokeWidth={1.5} />
       </div>
       <div className="footer-bottom site-container">
         <span>FACADE KAZAKHSTAN</span>
